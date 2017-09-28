@@ -15,11 +15,7 @@
     <!-- Portfolio Detail Start -->
     <% @portfolios.each do |portfolio| %>
     <div class="row portfolio">
-      <div class="col-4 custom-pad-1">
-        <%= image_tag(portfolio.image, :alt => portfolio.title, :class => 'card-img-top') unless portfolio.image.blank? %>
-      </div>
-
-      <div class="col-8 custom-pad-2">
+      <div class="col-12 custom-pad-2">
         <div class="table-responsive">
           <table class="table table-bordered">
             <tbody>
