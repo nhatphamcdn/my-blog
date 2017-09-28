@@ -39,18 +39,18 @@
 */
 /* Global Style */
 ::selection {
-  background-color: #1abc9c;
+  background-color: #17a2b8;
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: #1abc9c;
+  background-color: #17a2b8;
   color: #ffffff;
 }
 
 a {
   text-decoration: none !important;
-  color: #1abc9c;
+  color: #17a2b8;
 }
 
 a:active,
@@ -79,7 +79,7 @@ button {
 }
 
 .main-color {
-  color: #1abc9c;
+  color: #17a2b8;
 }
 
 .page-body {
@@ -152,7 +152,7 @@ button {
 }
 
 .button-style {
-  color: #1abc9c;
+  color: #17a2b8;
   overflow: hidden;
 }
 
@@ -160,14 +160,14 @@ button {
   position: absolute;
   font-size: 27px;
   line-height: 38px;
-  color: #1abc9c;
+  color: #17a2b8;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .button-style:active:before {
-  color: #1abc9c;
+  color: #17a2b8;
 }
 
 .button-anim:before {
@@ -200,7 +200,7 @@ button {
   margin: -26px 0 0 -26px;
   font-size: 10px;
   border-right: 5px solid #333333;
-  border-left: 5px solid #1abc9c;
+  border-left: 5px solid #17a2b8;
   border-radius: 50%;
   -webkit-animation: spinner 700ms infinite linear;
   animation: spinner 700ms infinite linear;
@@ -235,7 +235,7 @@ button {
   top: 0;
   font-size: 20px;
   color: #fff;
-  background: #1abc9c;
+  background: #17a2b8;
   padding: 12px;
 }
 
@@ -270,7 +270,7 @@ button {
 }
 
 .menu-link li a:hover {
-  color: #1abc9c;
+  color: #17a2b8;
 }
 /* About Me (Left Sidebar) */
 .about-fixed {
@@ -473,7 +473,7 @@ tr > td:nth-child(2) {
 }
 
 .form-control:focus {
-  border-color: #1abc9c;
+  border-color: #17a2b8;
   border-width: 2px;
 }
 /* Testimonials */
@@ -594,7 +594,7 @@ div.blog-post {
   content: '\e071';
   font-family: 'simple-line-icons';
   display: block;
-  color: #1abc9c;
+  color: #17a2b8;
   font-size: 65px;
   font-weight: 600;
   z-index: 1;
@@ -635,7 +635,7 @@ div.blog-post {
 }
 /* Blockquote */
 .post-quote {
-  background: #1abc9c;
+  background: #17a2b8;
   color: #f6f8f8;
   width: 70%;
   border-radius: 50px;
@@ -668,7 +668,7 @@ div.blog-post {
 
 blockquote {
   font-style: italic;
-  border-left: 5px solid #1abc9c;
+  border-left: 5px solid #17a2b8;
 }
 /* List */
 .list ul {
@@ -716,7 +716,7 @@ blockquote {
 }
 
 .endpage-box a:hover {
-  color: #1abc9c;
+  color: #17a2b8;
 }
 
 #endpage-box {
@@ -755,7 +755,7 @@ blockquote {
   font-size: 25px;
   line-height: 35px;
   font-weight: 600;
-  color: #1abc9c;
+  color: #17a2b8;
   margin-bottom: 25px;
   letter-spacing: 0.5px;
 }
@@ -765,7 +765,7 @@ blockquote {
   line-height: 28px;
   padding: 20px;
   border-radius: 4px;
-  border: 1px dashed #1abc9c;
+  border: 1px dashed #17a2b8;
   font-weight: 400;
 }
 /* Comment */
@@ -775,7 +775,7 @@ blockquote {
   font-size: 25px;
   line-height: 35px;
   font-weight: 600;
-  color: #1abc9c;
+  color: #17a2b8;
   margin-bottom: 35px;
   letter-spacing: 0.5px;
 }
@@ -784,7 +784,7 @@ blockquote {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 2px dashed #1abc9c;
+  border: 2px dashed #17a2b8;
   line-height: 90px;
   display: block;
   font-size: 16px;
@@ -795,7 +795,7 @@ blockquote {
 }
 
 .load-more-button:hover {
-  background-color: #1abc9c;
+  background-color: #17a2b8;
   color: #ffffff;
   box-shadow: 0 7px 9px #696969;
 }
@@ -804,7 +804,7 @@ blockquote {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 2px dashed #1abc9c;
+  border: 2px dashed #17a2b8;
   line-height: 90px;
   display: block;
   font-size: 16px;
@@ -830,7 +830,7 @@ blockquote {
 .subscribe-form .text-input {
   padding: 20px;
   border-radius: 50px;
-  border: solid 7px #1abc9c;
+  border: solid 7px #17a2b8;
   background: #333333;
   color: #ffffff;
   width: 100%;
@@ -879,7 +879,7 @@ blockquote {
   font-size: 16px;
   letter-spacing: 0.7px;
   color: #FFF;
-  background: #1abc9c;
+  background: #17a2b8;
   border: none;
   top: 5px;
   right: 5px;
@@ -1027,7 +1027,7 @@ blockquote {
 .scroll-to-top {
   display: none;
   font-size: 40px;
-  color: #1abc9c;
+  color: #17a2b8;
   position: fixed;
   right: 20px;
   bottom: 50px;
@@ -1606,7 +1606,7 @@ blockquote {
 }
 
 .uipasta-credit a {
-  color: #1abc9c;
+  color: #17a2b8;
   font-weight: 600;
 }
 
