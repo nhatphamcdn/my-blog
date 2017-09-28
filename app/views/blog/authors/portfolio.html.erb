@@ -16,7 +16,7 @@
     <% @portfolios.each do |portfolio| %>
     <div class="row portfolio">
       <div class="col-4 custom-pad-1">
-        <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
+        <%= image_tag(portfolio.image, :alt => portfolio.title, :class => 'card-img-top') unless portfolio.image.blank? %>
       </div>
 
       <div class="col-8 custom-pad-2">
@@ -36,13 +36,6 @@
                   <b>Skills</b>
                 </td>
                 <td><%= portfolio.use_skills %></td>
-              </tr>
-
-              <tr>
-                <td>
-                  <b>Cost</b>
-                </td>
-                <td>$5000</td>
               </tr>
 
               <tr>
