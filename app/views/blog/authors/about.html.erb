@@ -1,0 +1,49 @@
+<%= provide(:page_name, link_to('Home back', '/')) %>
+
+<div class="col-md-12 blog-post">
+
+  <!-- My Intro Start -->
+  <div class="post-title margin-bottom-30">
+    <h1>Hi, I am
+      <span class="main-color"><%= @author.name %></span>
+    </h1>
+  </div>
+  <!-- My Intro End -->
+
+  <div class="summary">
+    <%= @author.summary.html_safe %>
+  </div>
+
+  <!-- My Service Start -->
+  <div class="post-title">
+    <h1>My
+      <span class="main-color">Skills</span>
+    </h1>
+  </div>
+
+  <div class="list list-style-2 margin-top-30">
+    <div class="row no-gutter">
+      <% @author.skills.each do |x| %>
+        <div class="col-3">
+          <b><%= x['name'] %></b>
+        </div>
+        <div class="col-9">
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: <%= x['percent'] %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="level">
+            <ul>
+              <li>Beginner</li>
+              <li>Junior</li>
+              <li>Middle</li>
+              <li>Senior</li>
+              <li>Master</li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- My Service End -->
+
+</div>

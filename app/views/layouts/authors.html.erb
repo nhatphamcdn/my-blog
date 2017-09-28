@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <%= link_to 'My Blog', authors_path, :class => 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <%= link_to('Web view', root_path, :class => 'nav-link', :target => 'blank') %>
+            </li>
+            <li class="nav-item">
+                <%= link_to authors_profile_path, :class => 'nav-link' do %>
+                  <b>Hello</b> <%= current_user.name %>
+                <% end %>
+            </li>
+            <li class="nav-item">
+              <u><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'nav-link' %></u>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

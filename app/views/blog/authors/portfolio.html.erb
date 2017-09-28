@@ -1,0 +1,73 @@
+<%= provide(:page_name, 'My Portfolio') %>
+
+<div class="col-md-12 blog-post">
+
+  <!-- Intro Start -->
+  <div class="post-title margin-bottom-30">
+    <h1>Let's take a look on
+      <span class="main-color">My Work</span>
+    </h1>
+  </div>
+  <!-- Intro End -->
+
+  <!-- Portfolio Start -->
+  <div>
+    <!-- Portfolio Detail Start -->
+    <% @portfolios.each do |portfolio| %>
+    <div class="row portfolio">
+      <div class="col-4 custom-pad-1">
+        <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
+      </div>
+
+      <div class="col-8 custom-pad-2">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+
+              <tr>
+                <td>
+                  <b>Project name</b>
+                </td>
+                <td><%= portfolio.title %></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Skills</b>
+                </td>
+                <td><%= portfolio.use_skills %></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Cost</b>
+                </td>
+                <td>$5000</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Url</b>
+                </td>
+                <td>
+                  <%= link_to portfolio.title, portfolio.url %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>About Project</b>
+                </td>
+                <td><%= portfolio.summary %></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <!-- Portfolio Detail End -->
+  </div>
+  <!-- Portfolio End -->
+</div>

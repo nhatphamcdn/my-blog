@@ -1,0 +1,41 @@
+<%= provide(:page_name, link_to('Home back', '/')) %>
+
+<div class="col-md-12 blog-post">
+
+  <!-- Post Headline Start -->
+  <div class="post-title">
+    <h1><%= @post.title %></h1>
+  </div>
+  <div class="tags">
+    <%= raw @post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+  </div>
+  <!-- Post Headline End -->
+
+  <!-- Post Detail Start -->
+  <div class="post-info">
+    <span><%= @post.display_day_published %> / by
+      <%= link_to @post.user.name, about_path %>
+    </span>
+  </div>
+  <!-- Post Detail End -->
+  <div class="content">
+    <%= @post.body.html_safe %>
+  </div>
+
+  <!-- You May Also Like Start -->
+  <% unless @similars.empty?  %>
+  <div class="you-may-also-like margin-top-50 margin-bottom-50">
+    <h3>You may also like</h3>
+    <div class="row">
+      <% @similars.each do |s| %>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <%= link_to post_path(s) do %>
+          <p><%= s.title %></p>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+  <!-- You May Also Like End -->
+</div>

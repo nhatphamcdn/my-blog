@@ -1,0 +1,24 @@
+<fieldset class="card card-body">
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.text_field :image, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :url %>
+      <%= f.text_field :url, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :use_skills %>
+      <%= f.text_field :use_skills, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :summary %>
+      <%= f.text_area :summary, :class => 'form-control' %>
+    </div>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "Remove Portfolio", '#', class: "remove_fields" %>
+</fieldset>

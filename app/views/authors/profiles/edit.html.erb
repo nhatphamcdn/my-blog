@@ -1,0 +1,68 @@
+<div class="card card-body">
+  <%= form_for @user, url: authors_profile_info_path, method: :put do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :birthday %>
+      <%= f.date_select :birthday, :class => 'form-control', :start_year => 1970, :end_year => 2000 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, :class => 'form-control' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :summary %>
+      <%= f.trix_editor :summary, :row => 15, :class => 'form-control' %>
+    </div>
+    <h3><b>Skills</b></h3>
+    <div class="field skills_field">
+      <% unless @user.skills.blank? %>
+        <% @user.skills.each do |x| %>
+          <div class="fieldset">
+            <div class="row no-gutters">
+              <div class="column">
+                <%= f.label :skill_name, 'Skill name' %>
+                <%= f.text_field "skills[][name]", value: x['name'], id: :skill_name, :class => 'form-control' %>
+              </div>
+              <div class="column">
+                <%= f.label :skills_percent, 'Skill percent' %>
+                <%= f.number_field "skills[][percent]", value: x['percent'], id: :skills_percent, :class => 'form-control' %>
+              </div>
+            </div>
+            <a href="#" class="remove_skill">Remove skill</a>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="fieldset">
+          <div class="row no-gutters">
+            <div class="column">
+              <%= f.label :skill_name, 'Skill name' %>
+              <%= f.text_field "skills[][name]", value: nil, id: :skill_name %>
+            </div>
+            <div class="column">
+              <%= f.label :skills_percent, 'Skill percent' %>
+              <%= f.number_field "skills[][percent]", value: nil, id: :skills_percent %>
+            </div>
+            <a href="#" class="remove_skill">Remove skill</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <a href="#" class="btn btn-primary form-control add_new_skill">Add new skill</a>
+    <h3><b>Portfolio</b></h3>
+    <%= f.fields_for :portfolios do |builder| %>
+      <%= render 'portfolio_fields', :f => builder %>
+    <% end %>
+    <div>
+      <%= link_to_add_fields "Add Portfolio", f, :portfolios %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Save", :class => 'btn btn-success form-control' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,39 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.level ul {
+  padding: 0;
+  margin: 0 !important;
+  li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0.85em;
+    width: 19%;
+    text-align: center;
+  }
+}
+
+.post-title {
+  h1 {
+    a {
+      color: #333;
+    }
+  }
+}
+
+.front-blog {
+  .card {
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 30px;
+  }
+  .card-text {
+    margin-top: 15px; 
+  }
+
+  .post-info {
+    span {
+      color: #7b7b7b;
+    }
+  }
+}

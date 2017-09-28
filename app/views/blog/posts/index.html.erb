@@ -1,0 +1,32 @@
+<%= provide(:page_name, 'My Blog') %>
+
+<div class="front-blog">
+  <% @posts.each do |post| %>
+  <div class="col-md-12 card">
+    <div class="post-image">
+      <%= link_to post_path(post) do %>
+        <%= image_tag(post.banner_image_url, :alt => post.title, :class => 'card-img-top') unless post.banner_image_url.blank? %>
+      <% end %>
+    </div>
+    <div class="card-body">
+      <div class="post-title">
+        <h1>
+          <%= link_to post.title, post_path(post) %>
+        </h1>
+      </div>
+      <div class="tags">
+        <%= raw post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+      </div>
+      <div class="post-info">
+        <span><%= post.display_day_published %> / by
+          <%= post.user.name %>
+        </span>
+      </div>
+      <p class="card-text"><%= post.description %></p>
+    </div>
+  </div>
+  <% end %>
+  <div class="apple_pagination">
+    <%= will_paginate @posts, :container => false %>
+  </div>
+</div>

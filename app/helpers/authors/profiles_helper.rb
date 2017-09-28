@@ -1,0 +1,2 @@
+module Authors::ProfilesHelper
+end
